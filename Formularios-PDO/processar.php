@@ -3,14 +3,11 @@
 
     //include_once("cadastra.php");
     
-    require_once 'classes/autoload.php';
+    require_once 'class/autoload.php';
             $alunos = new cadastra();
-            $alunos->cadastrarCitizen();
+            $cadastro = $alunos->cadastrarCitizen();
 
-    //$linhas = mysqli_affected_rows($conexao);
-
-    mysqli_close($conexao);
-
+            
 ?>
 
 
@@ -45,20 +42,22 @@
             <h1>Cadastre seu Citizen</h1>
             <hr>
             <br><br>
-            </div>           
-            
+            </div>
+
                 <?php
+                    $msg= "";
 
-                    if ($linhas == 1) {
-                        print "Cadastro efetuado com sucesso!";
+                    if ($cadastro>0) {
+                        $msg = "Cadastro realizado com sucesso.";
+                    }else{
+                        $msg = "Não foi possível cadastrar";
                     }
-                    if ($linhas == 0) {
-                        print "Cadastro NÂO efetuado.<br> Já existe um usuário com este e-mail!";
-                    }                   
 
+                    echo '<script type="text/javascript"> alert("'.$msg.'") </script>';
+               
                 ?>
-
-                    <br><br>
+                
+                <br><br>
                 <a href="index.php">Ir ao Login</a>
 
         </section>
