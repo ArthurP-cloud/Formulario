@@ -1,0 +1,107 @@
+*{
+   margin: 0;
+   padding:0;
+}
+body{
+  background-color: #b8aa96;
+  font-family: Arial;
+  font-size: 100%;
+}
+
+.logo{
+  width: 100%;
+  height: 100px;
+    
+}
+img{
+  width: 100%;
+  height: 100%;
+    
+}
+.login{
+  text-align: center;
+  margin-top: 10px;
+    
+}
+
+.container{
+ width: 100%;
+ height: 500px;
+ margin-top: 20px;
+}
+ ul.menu{
+  list-style-type: none;
+  width: 80px;
+  height: 200px;
+  margin-top: 5px;
+
+}
+.menu{
+ background-color: #f78317;
+ float: left;
+  
+}
+ul li{
+  width: 80px;
+  height: 20px;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%,-50%);
+}
+ul li:hover{
+  cursor: pointer;
+  background-color: yellowgreen;
+}
+
+section{
+  width: 230px;
+  float:left;
+    
+}
+.cadastre{
+  height: 45px;
+  
+}
+h1{
+  font-size: 22px;
+  
+}
+
+fieldset{
+  width: 100%;
+  height: 300px;
+  border-color: #ccc;
+  border-radius: 5px;
+   
+}
+form{
+  width: 200px;
+  height: 260px;
+  padding-top: 5px;
+  margin-left: 10px;
+  
+}
+p{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.campo{
+  width: 100%;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-family: Arial;
+  font-size: 1.08em;
+  
+}
+p.btns{
+  text-align: center;
+}
+.btn{
+  width: 80px;
+  height: 25px;  
+}
+  
