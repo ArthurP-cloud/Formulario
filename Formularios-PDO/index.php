@@ -26,31 +26,32 @@
         </nav>
         <section>
             <div class="cadastre">
-            <h1>Cadastre seu Citizen</h1>
-            <hr>
-            <br><br>
+                <h1>Cadastre seu Citizen</h1>
+                <hr>
+                <br><br>
             </div>
             <div class="preencha">
-            <fieldset>
-                
-                <legend>Preencha todos os campos</legend>
-
-                    <form method="post" action="processar.php">
-
-                        <p>Nome</p>
-                        <input type="text" class="campo" name="nome" maxlength="12" required autofocus><br>
-                        <p>Sobrenome</p>
-                        <input type="text" class="campo" name="sobrenome" maxlength="20" required><br>
-                        <p>E-mail</p>
-                        <input type="email" class="campo" name="email" maxlength="50" requered><br>
-
-                        <p class="btns">
-                        <input type="submit" class="btn" value="Cadastrar">
-                        <input type="reset" class="btn" value="Limpar">
-                        </p>
-                    </form>
-
+                <fieldset>
                     
+                    <legend>Preencha todos os campos</legend>
+
+                        <form method="post" action="processar.php">
+
+                            <p>Nome</p>
+                            <input type="text" class="campo" name="nome" maxlength="12" required autofocus><br>
+                            <p>Sobrenome</p>
+                            <input type="text" class="campo" name="sobrenome" maxlength="20" required><br>
+                            <p>E-mail</p>
+                            <input type="email" class="campo" name="email" maxlength="50" required><br>
+                            <p>Senha</p>
+                            <input type="password" class="campo" name="senha" maxlength="8" required><br>
+                            
+
+                            <p class="btns">
+                            <input type="submit" class="btn" value="Cadastrar">
+                            <input type="reset" class="btn" value="Limpar">
+                            </p>
+                        </form>
             </div>
              
 

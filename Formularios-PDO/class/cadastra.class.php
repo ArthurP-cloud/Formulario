@@ -9,27 +9,28 @@ class cadastra extends conexao {
         $nome = $_POST['nome'];
         $sobrenome = $_POST['sobrenome'];
         $email = $_POST['email'];
+        $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+        
 
         $conn = $this->connect();
         
-        $verificar = "select email from usuario where email = '$email'";
+        $verificarEmailExist = "select email from usuario where email = '$email'";
 
-        $stmt = $conn->prepare($verificar);
+        $stmt = $conn->prepare($verificarEmailExist);
         
         $stmt->execute();
 
-        $vlinhas = $stmt->rowCount();
+        $verificarLinhas = $stmt->rowCount();
         
-        if ($vlinhas < 1){
+        if ($verificarLinhas < 1){
 
-        $sql = "insert into usuario (nome,sobrenome,email) values ('$nome','$sobrenome','$email')";
+        $sql = "insert into usuario (nome,sobrenome,email,senha) values ('$nome','$sobrenome','$email','$senha')";
         $stmt = $conn->prepare($sql);
         
         $stmt->execute();
 
         $linhas = $stmt->rowCount();
-        print "<br>";
-        print_r($linhas);
+
             if ($linhas == 1) {
                 return 1;
             }

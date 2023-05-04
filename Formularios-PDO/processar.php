@@ -39,9 +39,9 @@
         </nav>
         <section>
             <div class="cadastre">
-            <h1>Cadastre seu Citizen</h1>
-            <hr>
-            <br><br>
+                <h1>Cadastre seu Citizen</h1>
+                <hr>
+                <br><br>
             </div>
 
                 <?php
@@ -49,16 +49,18 @@
 
                     if ($cadastro>0) {
                         $msg = "Cadastro realizado com sucesso.";
+                        print "<p>Bem vindo Citizen</p>";
                     }else{
                         $msg = "Não foi possível cadastrar";
+                        print "<p>Tente novamente.</p>";
                     }
 
                     echo '<script type="text/javascript"> alert("'.$msg.'") </script>';
                
                 ?>
                 
-                <br><br>
-                <a href="index.php">Ir ao Login</a>
+            <br><br>
+            <a href="index.php">Ir ao Login</a>
 
         </section>
     </div>
