@@ -13,7 +13,7 @@
     </div>
     <div class="login">
 
-        Cadastre-se ou <a href="index.php">Login</a>
+        <a href="login.php">Login</a>
 
     </div>
     
@@ -55,7 +55,7 @@
             </div>
              
 
-            </fieldset>
+                </fieldset>
 
         </section>
     </div>

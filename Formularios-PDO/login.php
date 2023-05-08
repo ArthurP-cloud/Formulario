@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilo2.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Login</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
     </div>
         <div class="login">
 
-            Cadastre-se ou <a href="index.php">Login</a>
+        <a href="index.php">Cadastre-se</a>
 
         </div>
         
@@ -25,29 +25,28 @@
             </nav>
             <section>
                 <div class="cadastre">
-                    <h1>Cadastre seu Citizen</h1>
+                    <h1>Entrar com Citizen</h1>
                     <hr>
                     <br><br>
+                    <fieldset>
+                        <legend>Login</legend>
+                        <form action="logando.php" method="post">
+                            <p>E-mail</p><br>
+                            <input type="text" class="campo" name="email" maxlength="50" required autofocus><br>
+
+                            <p>Senha</p><br>
+                            <input type="password" class="campo" name="senha" maxlength="8" required><br>
+                            
+                            <p class="btns">
+                                <input type="submit" class="btn" value="Logar">
+                            </p>
+
+
+                        </form>
+                    </fieldset>
                 </div>
-
-                    <?php
-                        $msg= "";
-
-                        if ($cadastro>0) {
-                            $msg = "Cadastro realizado com sucesso.";
-                            print "<p>Bem vindo Citizen</p>";
-                        }else{
-                            $msg = "Não foi possível cadastrar";
-                            print "<p>Tente novamente.</p>";
-                        }
-
-                        echo '<script type="text/javascript"> alert("'.$msg.'") </script>';
-                
-                    ?>
                     
                 <br><br>
-                <a href="index.php">Ir ao Login</a>
-
             </section>
         </div>
     

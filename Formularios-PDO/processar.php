@@ -4,8 +4,8 @@
     //include_once("cadastra.php");
     
     require_once 'class/autoload.php';
-            $alunos = new cadastra();
-            $cadastro = $alunos->cadastrarCitizen();
+            $citizen = new cadastra();
+            $cadastro = $citizen->cadastrarCitizen();
 
             
 ?>
@@ -26,7 +26,7 @@
     </div>
     <div class="login">
 
-        Cadastre-se ou <a href="index.php">Login</a>
+        <a href="login.php">Login</a>
 
     </div>
     
@@ -60,7 +60,7 @@
                 ?>
                 
             <br><br>
-            <a href="index.php">Ir ao Login</a>
+            <a href="login.php">Ir ao Login</a>
 
         </section>
     </div>
