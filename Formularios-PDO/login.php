@@ -24,13 +24,18 @@
                 </ul>
             </nav>
             <section>
+
                 <div class="cadastre">
+
                     <h1>Entrar com Citizen</h1>
                     <hr>
                     <br><br>
+
                     <fieldset>
+
                         <legend>Login</legend>
-                        <form action="logando.php" method="post">
+
+                        <form action="home.php" method="post">
                             <p>E-mail</p><br>
                             <input type="text" class="campo" name="email" maxlength="50" required autofocus><br>
 

@@ -36,13 +36,7 @@ class cadastra extends conexao {
             }
 
         }
-        return 0;
+        return 0; 
 
-        
-
-        
-        
-        
-       
     }
 }

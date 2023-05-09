@@ -60,7 +60,7 @@
                 ?>
                 
             <br><br>
-            <a href="login.php">Ir ao Login</a>
+            <a class="air" href="login.php">Ir ao Login</a>
 
         </section>
     </div>
