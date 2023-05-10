@@ -50,8 +50,9 @@ class logando extends conexao{
             }
 
         }else{
-            header('Location: login.php');
-        }
+            
+                header('Location: login.php');
+            }
 
     }
 

@@ -1,12 +1,14 @@
 <?php
 session_start();
-      
+
+    if (empty($_SESSION['email']) && empty($_SESSION['senha'])) {
     require_once 'class/autoload.php';
         $logar = new logando();
         $testelogar = $logar->logarCitizen();
-    if((!isset($_SESSION['email'])) and (!isset($_SESSION['senha']))){
-        echo "É necessario realizar o login.";
     }
+    /*if((!isset($_SESSION['email'])) and (!isset($_SESSION['senha']))){
+        echo "É necessario realizar o login.";
+    }*/
 
 ?>
 <!DOCTYPE html>
@@ -41,14 +43,15 @@ session_start();
                     <br><br>
                     <fieldset>
                         <legend>Login</legend>
+
+                            <form action="login.php" class="btnsairf">
+                            <input type="submit" class="btnsair" value="X".<?php session_destroy()?>>
+                            </form>
+                            
                             <?php
                             
-                            if ($testelogar == 1){
-
-                                print "Bem vindo,".$_SESSION['email'];
-
-                                
-                            }
+                            if (!empty($_SESSION['email'])){
+                                print "Bem vindo,".$_SESSION['email'];}
                             
                             ?>
                     </fieldset>

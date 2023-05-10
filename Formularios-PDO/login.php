@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -44,16 +48,19 @@
                             
                             <p class="btns">
                                 <input type="submit" class="btn" value="Logar">
-                            </p>
-
+                            </p><br>
 
                         </form>
+
                     </fieldset>
+
                 </div>
                     
                 <br><br>
             </section>
+
         </div>
     
 </body>
+
 </html>
