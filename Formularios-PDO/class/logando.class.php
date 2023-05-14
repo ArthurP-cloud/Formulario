@@ -27,6 +27,11 @@ class logando extends conexao{
                 //var_dump($result_usuario);
                 if (password_verify($senha, $result_usuario['senha'])) {
                     $_SESSION['senha'] = $senha;
+
+                    $_SESSION['parent1'] = $result_usuario['parent1'];
+                    $_SESSION['parent2'] = $result_usuario['parent2'];
+                    $_SESSION['locinicio'] = $result_usuario['locinicio'];
+                    
                 }else{
                     header('Location: login.php');
                 }

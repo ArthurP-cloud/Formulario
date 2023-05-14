@@ -23,8 +23,11 @@ class cadastra extends conexao {
         $verificarLinhas = $stmt->rowCount();
         
         if ($verificarLinhas < 1){
+        $rand = rand(0,1);
+        $rand1 = rand(0,1);
+        $rand2 = rand(0,1);
 
-        $sql = "insert into usuario (nome,sobrenome,email,senha) values ('$nome','$sobrenome','$email','$senha')";
+        $sql = "insert into usuario (nome,sobrenome,email,senha,parent1,parent2,locinicio) values ('$nome','$sobrenome','$email','$senha','$rand','$rand1','$rand2')";
         $stmt = $conn->prepare($sql);
         
         $stmt->execute();
