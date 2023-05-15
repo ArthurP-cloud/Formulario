@@ -27,9 +27,13 @@ class logando extends conexao{
                 //var_dump($result_usuario);
                 if (password_verify($senha, $result_usuario['senha'])) {
                     $_SESSION['senha'] = $senha;
-
+                    
+                    $_SESSION['nome'] = $result_usuario['nome'];
+                    $_SESSION['sobrenome'] = $result_usuario['sobrenome'];
                     $_SESSION['parent1'] = $result_usuario['parent1'];
                     $_SESSION['parent2'] = $result_usuario['parent2'];
+                    $_SESSION['parentAdotivo1'] = $result_usuario['parentAdotivo1'];
+                    $_SESSION['parentAdotivo2'] = $result_usuario['parentAdotivo2'];
                     $_SESSION['locinicio'] = $result_usuario['locinicio'];
                     
                 }else{
