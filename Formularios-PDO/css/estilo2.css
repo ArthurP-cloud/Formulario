@@ -110,4 +110,10 @@ p.btns{
 a.air{
   text-align: center;
 }
+.btnteste{
+  background-color: blue;
+  color: green;
+  padding: 2px;
+  margin: 50px;
+}
   

@@ -102,19 +102,19 @@ session_start();
                             if ($_SESSION['parentAdotivo1']!=null && $_SESSION['parentAdotivo2']!=null){
                                 switch($_SESSION['parentAdotivo1']){
                                     case 1:
-                                        print "Seus pais são Rodrigo e ";
+                                        print "Pais adotivos, Rodrigo e ";
                                     break;
                                     case 2:
-                                        print "Seus pais são Bruno e ";
+                                        print "Pais adotivos, Bruno e ";
                                     break;
                                     case 3:
-                                        print "Seus pais são Carlos e ";
+                                        print "Pais adotivos, Carlos e ";
                                     break;
                                     case 4:
-                                        print "Seus pais são Yan e ";
+                                        print "Pais adotivos, Yan e ";
                                     break;
                                     case 5:
-                                        print "Seus pais são Arthur e ";
+                                        print "Pais adotivos, Arthur e ";
                                     break;
                                 }
                                 switch($_SESSION['parentAdotivo2']){

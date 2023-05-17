@@ -52,11 +52,11 @@
                             <input type="reset" class="btn" value="Limpar">
                             </p>
                         </form>
-            </div>
-             
-
+                        <form action="testes.php">
+                            <input type="submit" class="btnteste" value="Area de testes">
+                        </form>
                 </fieldset>
-
+            </div>
         </section>
     </div>
 
