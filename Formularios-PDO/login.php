@@ -16,7 +16,7 @@ session_start();
     </div>
         <div class="login">
 
-        <a href="index.php">Cadastre-se</a>
+        <a href="index.php">Cadastre-se</a>  
 
         </div>
         
