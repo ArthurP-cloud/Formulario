@@ -4,6 +4,8 @@ class logando extends conexao{
 
     public function logarCitizen(){
 
+
+
         if(!empty($_POST['email'])){
             //tem que ser a primeira linha da pagina
 
@@ -35,13 +37,14 @@ class logando extends conexao{
                     $_SESSION['parentAdotivo1'] = $result_usuario['parentAdotivo1'];
                     $_SESSION['parentAdotivo2'] = $result_usuario['parentAdotivo2'];
                     $_SESSION['locinicio'] = $result_usuario['locinicio'];
+                    return 1;
                     
                 }else{
                     header('Location: login.php');
                 }
 
 
-                return 1;
+                
 
             }else{
 
@@ -62,7 +65,6 @@ class logando extends conexao{
             
                 header('Location: login.php');
             }
-
     }
 
 }

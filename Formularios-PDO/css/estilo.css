@@ -2,6 +2,9 @@
   margin: 0;
   padding:0;
 }
+:root{
+  font-size: 16px;
+}
 body{
  width: 100vw;
  height: 100vh;
@@ -70,7 +73,7 @@ section{
  
 }
 h1{
- font-size: 22px;
+ font-size: 1.375rem;
  
 }
 
@@ -97,7 +100,7 @@ p{
  padding-bottom: 2px;
  font-family: Arial;
  font-size: 1.08em;
- 
+
 }
 p.btns{
  text-align: center;
@@ -118,6 +121,14 @@ form.btnsairf{
   background-color: red;
   border-radius: 5px;
   border-color: rgb(253, 111, 111);
+}
+.options {
+  position: absolute;
+  left: 82%;
+  top: 440px;
+  display: flex;
+  margin-left: -150px;
+  
 }
  
  

@@ -1,6 +1,9 @@
 <?php
 session_start();
-
+/*if($_SESSION){
+    header('Location: home.php');
+}*/
+var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -40,12 +43,13 @@ session_start();
                         <legend>Login</legend>
 
                         <form action="home.php" method="post">
-                            <p>E-mail</p><br>
-                            <input type="text" class="campo" name="email" maxlength="50" required autofocus><br>
-
-                            <p>Senha</p><br>
-                            <input type="password" class="campo" name="senha" maxlength="8" required><br>
+                            <br>
+                            <input type="text" class="campo" name="email" maxlength="50" placeholder="E-mail" required autofocus><br>
                             
+                            <br>
+                            <input type="password" class="campo" name="senha" placeholder="Senha" maxlength="8" required><br>
+                            
+                            <br>
                             <p class="btns">
                                 <input type="submit" class="btn" value="Logar">
                             </p><br>
