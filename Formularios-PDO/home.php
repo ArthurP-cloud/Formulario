@@ -11,7 +11,6 @@ session_start();
     if(!$_SESSION){
         header("Location: login.php");
     }
-    var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

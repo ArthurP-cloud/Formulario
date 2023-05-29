@@ -38,7 +38,6 @@ class logando extends conexao{
                     return 1;
                     
                 }else{
-                    session_destroy();
                     unset($_SESSION['email']);
                     unset($_SESSION['senha']);
                     unset($_SESSION['nome']);
@@ -48,10 +47,15 @@ class logando extends conexao{
                     unset($_SESSION['parentAdotivo1']);
                     unset($_SESSION['parentAdotivo2']);
                     unset($_SESSION['locinicio']);
-                    return 3;
+                    $_SESSION['msg'] = "<p style='color: red'>Erro: Usuário ou senha inválida!</p><br>";
+                    header("Location: login.php");
                     
                 }
 
+            }else{
+                $_SESSION['msg'] = "<p style='color: red'>Erro: Usuário ou senha inválida!</p><br>";
+                header("Location: login.php");
+                
             }
 
         }

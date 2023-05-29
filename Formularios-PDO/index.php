@@ -1,9 +1,8 @@
 <?php
 session_start();
-if($_SESSION){
+if(!empty($_SESSION['email'])){
     header("Location: home.php");
 }
-var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -18,24 +17,18 @@ var_dump($_SESSION);
     <div class="logo">
         <img src="imagens/Banner-1-The Citizen.png" alt="Logo">
     </div>
-    <div class="login">
-
-        <a href="login.php">Login</a>
-
-    </div>
     
     <div class="container">
         <nav>
             <ul class="menu">
-                <a href="index.php"></a><li>Inicio</li><br>
-                <li>Game</li>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="login.php">Game</a></li>
             </ul>
         </nav>
         <section>
             <div class="cadastre">
                 <h1>Cadastre seu Citizen</h1>
-                <hr>
-                <br><br>
+                <hr><br>
             </div>
             <div class="preencha">
                 <fieldset>
@@ -44,14 +37,13 @@ var_dump($_SESSION);
 
                         <form method="post" action="processar.php">
 
-                            <p>Nome</p>
-                            <input type="text" class="campo" name="nome" maxlength="12" required autofocus><br>
-                            <p>Sobrenome</p>
-                            <input type="text" class="campo" name="sobrenome" maxlength="20" required><br>
-                            <p>E-mail</p>
-                            <input type="email" class="campo" name="email" maxlength="50" required><br>
-                            <p>Senha</p>
-                            <input type="password" class="campo" name="senha" maxlength="8" required><br>
+                            <input type="text" class="campo" name="nome" maxlength="12" placeholder="Nome" required autofocus><br><br>
+
+                            <input type="text" class="campo" name="sobrenome" maxlength="20" placeholder="SobreNome" required><br><br>
+  
+                            <input type="email" class="campo" name="email" maxlength="50" placeholder="E-mail" required><br><br>
+
+                            <input type="password" class="campo" name="senha" maxlength="8" placeholder="Senha" required><br>
                             
 
                             <p class="btns">
@@ -59,13 +51,12 @@ var_dump($_SESSION);
                             <input type="reset" class="btn" value="Limpar">
                             </p>
                         </form>
-                        <form action="testes.php">
-                            <input type="submit" class="btnteste" value="Area de testes">
-                        </form>
+                            
+                        
                 </fieldset>
             </div>
         </section>
     </div>
-
+    
 </body>
 </html>

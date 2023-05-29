@@ -3,7 +3,7 @@ session_start();
 /*if($_SESSION){
     header('Location: home.php');
 }*/
-if($_SESSION){
+if(!empty($_SESSION['email'])){
         header("Location: home.php");
     }
 ?>
@@ -18,18 +18,12 @@ if($_SESSION){
 <body>
     <div class="logo">
             <img src="imagens/Banner-1-The Citizen.png" alt="Logo">
-    </div>
-        <div class="login">
-
-        <a href="index.php">Cadastre-se</a>  
-
-        </div>
-        
+    </div>        
         <div class="container">
             <nav>
                 <ul class="menu">
-                    <li>Inicio</li><br>
-                    <li>Game</li>
+                    <li><a href="index.php">Inicio</a></li><br>
+                    <li><a href="login.php">Game</a></li>
                 </ul>
             </nav>
             <section>
@@ -38,8 +32,13 @@ if($_SESSION){
 
                     <h1>Entrar com Citizen</h1>
                     <hr>
-                    <br><br>
-
+                    <br>
+                    <?php
+                        if(isset($_SESSION['msg'])){
+                            echo $_SESSION['msg'];
+                            unset($_SESSION['msg']);
+                        }
+                    ?>
                     <fieldset>
 
                         <legend>Login</legend>
