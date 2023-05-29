@@ -1,3 +1,10 @@
+<?php
+session_start();
+if($_SESSION){
+    header("Location: home.php");
+}
+var_dump($_SESSION);
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

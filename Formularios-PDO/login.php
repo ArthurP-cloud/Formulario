@@ -3,7 +3,9 @@ session_start();
 /*if($_SESSION){
     header('Location: home.php');
 }*/
-var_dump($_SESSION);
+if($_SESSION){
+        header("Location: home.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -51,7 +53,7 @@ var_dump($_SESSION);
                             
                             <br>
                             <p class="btns">
-                                <input type="submit" class="btn" value="Logar">
+                                <input type="submit" class="btn" name="logar" value="Logar">
                             </p><br>
 
                         </form>

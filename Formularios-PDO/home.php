@@ -1,7 +1,6 @@
 <?php
 session_start();
-
-    if (empty($_SESSION['email']) && empty($_SESSION['senha'])) {
+    if (isset($_POST['logar']) && empty($_SESSION['email']) && empty($_SESSION['senha'])) {
     require_once 'class/autoload.php';
         $logar = new logando();
         $testelogar = $logar->logarCitizen();
@@ -9,8 +8,10 @@ session_start();
     /*if((!isset($_SESSION['email'])) and (!isset($_SESSION['senha']))){
         echo "É necessario realizar o login.";
     }*/
-
-    var_dump($testelogar);
+    if(!$_SESSION){
+        header("Location: login.php");
+    }
+    var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -39,10 +40,10 @@ session_start();
                     <br><br>
                     <fieldset>
                         <legend>Login</legend>
-
-                            <form action="login.php" class="btnsairf">
-                                <input type="submit" class="btnsair" value="X".<?php session_destroy()?>>
-                            </form>
+                            <div class="divsair">
+                            <button class="btnsair"><a href="sair.php">X</a></button>
+                            </div>
+                            
                             <div class="textphp">
                                 <?php
                                 

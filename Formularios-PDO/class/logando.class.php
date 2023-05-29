@@ -4,9 +4,7 @@ class logando extends conexao{
 
     public function logarCitizen(){
 
-
-
-        if(!empty($_POST['email'])){
+        if(isset($_POST['logar']) && !empty($_POST['email'])){
             //tem que ser a primeira linha da pagina
 
             //$dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -28,7 +26,7 @@ class logando extends conexao{
                 
                 //var_dump($result_usuario);
                 if (password_verify($senha, $result_usuario['senha'])) {
-                    $_SESSION['senha'] = $senha;
+                    $_SESSION['senha'] = $result_usuario['senha'];
                     
                     $_SESSION['nome'] = $result_usuario['nome'];
                     $_SESSION['sobrenome'] = $result_usuario['sobrenome'];
@@ -40,32 +38,26 @@ class logando extends conexao{
                     return 1;
                     
                 }else{
-                    header('Location: login.php');
+                    session_destroy();
+                    unset($_SESSION['email']);
+                    unset($_SESSION['senha']);
+                    unset($_SESSION['nome']);
+                    unset($_SESSION['sobrenome']);
+                    unset($_SESSION['parent1']);
+                    unset($_SESSION['parent2']);
+                    unset($_SESSION['parentAdotivo1']);
+                    unset($_SESSION['parentAdotivo2']);
+                    unset($_SESSION['locinicio']);
+                    return 3;
+                    
                 }
 
-
-                
-
-            }else{
-
-                unset($_SESSION['email']);
-                unset($_SESSION['senha']);
-                $result_usuario = null;
-
-                echo '<script type="text/javascript"> alert("Citizen não encontrado.") </script>';
-
-                if(empty($_SESSION['email']) && empty($_SESSION['senha'])){
-                    header('Location: login.php');
-                }
-                
-                return 0;
             }
 
-        }else{
-            
-                header('Location: login.php');
-            }
+        }
+     
     }
+    
 
 }
 
