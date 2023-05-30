@@ -1,5 +1,6 @@
 <?php
 session_start();
+
     if (isset($_POST['logar']) && empty($_SESSION['email']) && empty($_SESSION['senha'])) {
     require_once 'class/autoload.php';
         $logar = new logando();
@@ -11,6 +12,8 @@ session_start();
     if(!$_SESSION){
         header("Location: login.php");
     }
+    $fileF = file('./text/nomesF.txt');
+    $fileM = file('./text/nomesM.txt');
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -49,13 +52,19 @@ session_start();
                                 if (!empty($_SESSION['email'])){
                                     print "&emsp;Bem vindo,\n".$_SESSION['nome']."\n".$_SESSION['sobrenome'].".<br>";}
 
-                                switch ($_SESSION['parent1']){
-                                    case 0:
-                                        if($_SESSION['parent1'] == 0 && $_SESSION['parent2'] == 0){
-                                            print "<p> Filho de pais desconhecidos"; 
-                                        }else{
-                                            print "<p>Filho de pai desconhecido e ";}
-                                    break;
+                                //switch ($_SESSION['parent1']){
+                                    //case 0:
+                                if($_SESSION['parent1'] == 0 && $_SESSION['parent2'] == 0){
+                                    print "<p>&emsp;Filho de pais desconhecidos."; 
+                                }else if($_SESSION['parent1'] == 0 && $_SESSION['parent2'] !=0){
+                                    print "<p>&emsp;Filho de pai desconhecido e ".trim($fileF[$_SESSION['parent2']]).".";
+                                }else if($_SESSION['parent1'] !=0 && $_SESSION['parent2'] == 0)
+                                {
+                                    print "&emsp;Filho de ".$fileM[$_SESSION['parent1']]."e mãe desconhecida.";
+                                }else{
+                                    print "&emsp;Filho de ".$fileM[$_SESSION['parent1']]."e ".trim($fileF[$_SESSION['parent2']]).".";
+                                }
+                                    /*break;
                                     case 1:
                                         print "<p>&emsp;Filho de Rodrigo e ";
                                     break;
@@ -70,9 +79,9 @@ session_start();
                                     break;
                                     case 5:
                                         print "<p>&emsp;Filho de Arthur e ";
-                                    break;
-                                }
-                                switch ($_SESSION['parent2']){
+                                    break;*/
+                                //}
+                                /*switch ($_SESSION['parent2']){
                                     case 0:
                                         if($_SESSION['parent1'] == 0 && $_SESSION['parent2'] == 0){
                                             print ".</p>"; 
@@ -94,7 +103,7 @@ session_start();
                                     case 5:
                                         print "Daniela.</p>";
                                     break;
-                                }
+                                }*/
                                 if ($_SESSION['parentAdotivo1']!=null && $_SESSION['parentAdotivo2']!=null){
                                     switch($_SESSION['parentAdotivo1']){
                                         case 1:

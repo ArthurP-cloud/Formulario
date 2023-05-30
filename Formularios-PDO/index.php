@@ -29,8 +29,7 @@ if(!empty($_SESSION['email'])){
             <div class="cadastre">
                 <h1>Cadastre seu Citizen</h1>
                 <hr><br>
-            </div>
-            <div class="preencha">
+                
                 <fieldset>
                     
                     <legend>Preencha todos os campos</legend>

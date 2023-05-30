@@ -27,13 +27,13 @@ class cadastra extends conexao {
         $a = 0;
         while ($a <= 19) {
         
-        $randparent1 = rand(0,5);
-        $randparent2 = rand(0,5);
+        $randparent1 = rand(0,502);
+        $randparent2 = rand(0,785);
         $randlocinicio = rand(0,4);
         
             if ($randparent1 == 0 && $randparent2 == 0){
-                $randParentAdotivo1 = rand(1,5);
-                $randParentAdotivo2 = rand(1,5);
+                $randParentAdotivo1 = rand(1,501);
+                $randParentAdotivo2 = rand(1,784);
                 $randlocinicio = rand(2,3);
                 $sql = "insert into usuario (nome,sobrenome,email,senha,parent1,parent2,parentAdotivo1,parentAdotivo2,locinicio) values 
                 ('$nome','$sobrenome','$email','$senha','$randparent1','$randparent2','$randParentAdotivo1','$randParentAdotivo2','$randlocinicio')";

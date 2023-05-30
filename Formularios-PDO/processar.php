@@ -24,17 +24,12 @@
     <div class="logo">
         <img src="imagens/Banner-1-The Citizen.png" alt="Logo">
     </div>
-    <div class="login">
-
-        <a href="login.php">Login</a>
-
-    </div>
     
     <div class="container">
         <nav>
             <ul class="menu">
-                <li>Inicio</li><br>
-                <li>Game</li>
+                <li><a href="index.php">Inicio</a></li><br>
+                <li><a href="login.php">Game</a></li>
             </ul>
         </nav>
         <section>
