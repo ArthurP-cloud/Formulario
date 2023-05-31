@@ -21,29 +21,28 @@ img {
   width: 100%;
   height: 100%;
 }
-ul{
+ul {
   background-color: #bfbfbf;
-  padding-right: 130px;
-  padding-left: 130px;
   display: flex;
   list-style: none;
   justify-content: space-between;
+  gap: 50px;
 }
-a{
-  color:black;
+a {
+  color: black;
   text-decoration: none;
 }
 .container {
   width: 100%;
   height: 500px;
-  margin-top:20px;
-  display:flex;
+  margin-top: 20px;
+  display: flex;
   flex-direction: column;
 }
-h1{
+h1 {
   padding-left: 20px;
 }
-section{
+section {
   display: flex;
   padding: 20px;
 }
@@ -51,19 +50,19 @@ section{
   text-align: right;
   padding-right: 5px;
 }
-.btnsair{
+.btnsair {
   padding: 1px;
   background-color: red;
   border-radius: 5px;
   border-color: rgb(253, 111, 111);
 }
-.textphp{
+.textphp {
   padding: 5px;
 }
-.options{
+.options {
   text-align: center;
 }
-.vamos{
+.vamos {
   padding: 3px;
   background-color: green;
   border-radius: 5px;
